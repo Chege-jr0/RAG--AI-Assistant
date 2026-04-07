@@ -75,11 +75,17 @@ data-analytics-rag/
 ## Tech Stack
 
 -FastAPI -> BackendAPI
+
 -Streamlit -> Frontend Interface
+
 -LangChain -> RAG Orchestration
+
 -ChromaDB -> Vector Storage
--Ollama -> Free Local AI Model
+
+-Ollama -> Free Local AI Server
+
 -Tinyllama -> The AI model
+
 -Pandas-> Data Cleaning and Processing
 
 ##  Example Questions to Ask
