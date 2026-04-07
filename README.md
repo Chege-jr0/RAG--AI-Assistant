@@ -37,8 +37,8 @@ ollama pull tinyllama
 ```bash
 uvicorn main:app --reload
 ```
- ## Running the frontend
-````bash
+### 6. Running the frontend
+```bash
 streamlit run frontend.py
 ```
 
