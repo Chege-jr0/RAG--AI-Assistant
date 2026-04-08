@@ -1,6 +1,6 @@
 #  Data Analytics RAG
 
-Chat with your CSV and Excel files using plain English — powered by FastAPI + LangChain + OpenAI.
+Chat with your CSV and Excel files using plain English — powered by FastAPI + LangChain + Ollama
 
 I created a technical article expalining how the system works
 
@@ -23,20 +23,25 @@ venv\Scripts\activate        # Windows
 pip install -r requirements.txt
 ```
 
-### 4. Set your OpenAI API Key
-Create a `.env` file in the project folder:
-```
-OPENAI_API_KEY=your-openai-api-key-here
-```
-Or set it directly in the terminal:
+### 4. Set your Ollama Server 
+Open the terminal:
 ```bash
-set OPENAI_API_KEY=your-openai-api-key-here   # Windows
+ollama serve
+```
+Pull the tinyllama model:
+```bash
+ollama pull tinyllama
 ```
 
-### 5. Run the app
+### 5. Run the backend app
 ```bash
 uvicorn main:app --reload
 ```
+### 6. Running the frontend
+```bash
+streamlit run frontend.py
+```
+
 
 ### 6. Open the interactive API docs
 Go to: **http://127.0.0.1:8000/docs**
@@ -70,11 +75,17 @@ data-analytics-rag/
 ## Tech Stack
 
 -FastAPI -> BackendAPI
+
 -Streamlit -> Frontend Interface
+
 -LangChain -> RAG Orchestration
+
 -ChromaDB -> Vector Storage
--Ollama -> Free Local AI Model
+
+-Ollama -> Free Local AI Server
+
 -Tinyllama -> The AI model
+
 -Pandas-> Data Cleaning and Processing
 
 ##  Example Questions to Ask
